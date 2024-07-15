@@ -28,7 +28,10 @@ module.exports = {
         quinary: "#E6E6E6",
         senary: "#929292",
       },
-      backgroundImage: {},
+      backgroundImage: { "principles-pattern": "url('/principlesBg.png)" },
+      scale: {
+        "-100": "-1",
+      },
     },
   },
   plugins: [require("@tailwindcss/typography")],

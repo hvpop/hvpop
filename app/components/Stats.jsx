@@ -38,7 +38,7 @@ const Stats = ({ content }) => {
 
   return (
     <div className="flex justify-center">
-      <div className="mx-[8%] px-[5%] w-full rounded-b-lg text-white font-lilita-one bg-secondary gap-2 whitespace-nowrap pb-4 shadow-lg flex justify-around overflow-hidden lg:overflow-visible">
+      <div className="mx-[8%] px-[5%] w-full rounded-b-2xl text-white font-lilita-one bg-secondary gap-2 whitespace-nowrap pb-4 shadow-lg flex justify-around overflow-hidden lg:overflow-visible">
         {visibleStats.map((stat, index) => (
           <div
             key={index}

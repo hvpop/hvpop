@@ -44,9 +44,9 @@ const Partners = ({ content }) => {
 
       {selectedPartner && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="bg-white max-w-[800px] overflow-x-hidden w-10/12 max-h-svh overflow-y-auto p-5 md:p-8 rounded-lg mx-auto my-4 shadow-lg relative border-b-8 border-primary">
+          <div className="bg-white max-w-[900px] overflow-x-hidden w-[98%] max-h-[98%] overflow-y-auto p-5 md:p-8 rounded-lg mx-auto my-4 shadow-lg relative border-b-8 border-primary">
             <button
-              className="absolute flex items-center justify-center top-3 right-3 font-lilita-one bg-tertiary text-white w-6 h-6 text-sm md:w-8 md:h-8 md:text-xl rounded-lg transform active:scale-75 transition-transform"
+              className="sticky flex items-center justify-center top-0 left-[100%] font-lilita-one bg-tertiary text-white w-6 h-6 text-sm md:w-8 md:h-8 md:text-xl rounded-lg transform active:scale-75 transition-transform"
               onClick={closePopup}>
               X
             </button>
@@ -63,9 +63,7 @@ const Partners = ({ content }) => {
               </div>
               <div className="text-center md:text-start">
                 <div className="mb-5 md:bm-8">
-                  <h2 className="text-xl font-bold text-primary  text-nowrap">
-                    {selectedPartner.name}
-                  </h2>
+                  <h2 className="text-xl font-bold text-primary">{selectedPartner.name}</h2>
                   <h3 className="mb-2  text-nowrap">{selectedPartner.code}</h3>
                   <div className="w-full h-[2px] bg-tertiary"></div>
                 </div>

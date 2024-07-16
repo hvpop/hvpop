@@ -56,7 +56,7 @@ const StoryMedia = ({ content }) => {
           <div className="absolute top-1/2 transform -translate-y-1/2 left-[-40px] sm:block hidden">
             <button
               onClick={handleScrollLeft}
-              className="bg-tertiary text-white p-[1px] rounded-lg shadow-md transform active:scale-75 transition-transform flex item justify-center">
+              className="bg-tertiary text-white p-[1px] rounded-2xl shadow-md transform active:scale-75 transition-transform flex item justify-center">
               <IoMdArrowDropleft fontSize={25} />
             </button>
           </div>
@@ -65,7 +65,7 @@ const StoryMedia = ({ content }) => {
           <div className="absolute top-1/2 transform -translate-y-1/2 right-[-40px] sm:block hidden">
             <button
               onClick={handleScrollRight}
-              className="bg-tertiary text-white p-[1px] rounded-lg shadow-md transform active:scale-75 transition-transform flex item justify-center">
+              className="bg-tertiary text-white p-[1px] rounded-2xl shadow-md transform active:scale-75 transition-transform flex item justify-center">
               <IoMdArrowDropright fontSize={25} />
             </button>
           </div>
@@ -84,9 +84,9 @@ const StoryMedia = ({ content }) => {
           <div
             key={index}
             onClick={() => handleImageClick(index)}
-            className="relative flex-shrink-0 md:w-[160px] md:h-[140px] w-[140px] h-[120px] shadow-md rounded-lg cursor-pointer">
+            className="relative flex-shrink-0 md:w-[160px] md:h-[140px] w-[140px] h-[120px] shadow-md rounded-2xl cursor-pointer">
             <Image
-              className="w-full h-full rounded-lg object-cover object-center"
+              className="w-full h-full rounded-2xl object-cover object-center"
               src={urlFor(src).url()}
               alt={`Slide ${index}`}
               width={500}

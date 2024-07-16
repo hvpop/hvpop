@@ -67,12 +67,12 @@ const Team = ({ content }) => {
       <div className="flex items-center justify-center flex-col">
         <div className="flex gap-3 mb-16">
           <button
-            className={` border-2 border-primary rounded-lg px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "brotas" ? "bg-primary text-white" : " bg-none text-primary"}`}
+            className={` border-2 border-primary rounded-2xl px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "brotas" ? "bg-primary text-white" : " bg-none text-primary"}`}
             onClick={() => handleUnitClick("brotas")}>
             Brotas
           </button>
           <button
-            className={` border-2 border-primary rounded-lg px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "rv" ? "bg-primary text-white" : " bg-none text-primary"}`}
+            className={` border-2 border-primary rounded-2xl px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "rv" ? "bg-primary text-white" : " bg-none text-primary"}`}
             onClick={() => handleUnitClick("rv")}>
             Rio Vermelho
           </button>
@@ -84,7 +84,7 @@ const Team = ({ content }) => {
               <div className="absolute top-[120px]  left-[-40px] sm:block hidden">
                 <button
                   onClick={handleScrollLeft}
-                  className="bg-primary text-white p-[1px] rounded-lg shadow-md transform active:scale-75 transition-transform flex item justify-center">
+                  className="bg-primary text-white p-[1px] rounded-2xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
                   <IoMdArrowDropleft fontSize={25} />
                 </button>
               </div>
@@ -93,7 +93,7 @@ const Team = ({ content }) => {
               <div className="absolute top-[120px] right-[-40px] sm:block hidden">
                 <button
                   onClick={handleScrollRight}
-                  className="bg-primary text-white p-[1px] rounded-lg shadow-md transform active:scale-75 transition-transform flex item justify-center">
+                  className="bg-primary text-white p-[1px] rounded-2xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
                   <IoMdArrowDropright fontSize={25} />
                 </button>
               </div>
@@ -123,7 +123,7 @@ const Team = ({ content }) => {
                   />
                 </div>
                 <div>
-                  <p className="absolute left-[-10px]  -mt-5 w-[190px] sm:w-[230px] text-center text-nowrap bg-tertiary overflow-hidden px-4 py-2 rounded-lg shadow-lg text-white">
+                  <p className="absolute left-[-10px]  -mt-5 w-[190px] sm:w-[230px] text-center text-nowrap bg-tertiary overflow-hidden px-4 py-2 rounded-2xl shadow-lg text-white">
                     {member.name}
                   </p>
                 </div>
@@ -134,9 +134,9 @@ const Team = ({ content }) => {
       </div>
       {selectedMember && (
         <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">
-          <div className="bg-white max-w-[800px] w-10/12 max-h-svh overflow-y-auto p-5 md:p-8 rounded-lg mx-auto my-4 shadow-lg relative border-b-8 border-primary overflow-x-hidden">
+          <div className="bg-white max-w-[900px] overflow-x-hidden w-[98%] max-h-[98%] overflow-y-auto p-5 md:p-8 rounded-lg mx-auto my-4 shadow-lg relative border-b-8 border-primary">
             <button
-              className="absolute flex items-center justify-center top-3 right-3 font-lilita-one bg-tertiary text-white w-6 h-6 text-sm md:w-8 md:h-8 md:text-xl rounded-lg transform active:scale-75 transition-transform"
+              className="sticky flex items-center justify-center top-0 left-[100%] font-lilita-one bg-tertiary text-white w-6 h-6 text-sm md:w-8 md:h-8 md:text-xl rounded-lg transform active:scale-75 transition-transform"
               onClick={closePopup}>
               X
             </button>
@@ -153,9 +153,7 @@ const Team = ({ content }) => {
               </div>
               <div className="text-center md:text-start">
                 <div className="mb-5 md:bm-8">
-                  <h2 className="text-xl font-bold text-primary text-nowrap">
-                    {selectedMember.name}
-                  </h2>
+                  <h2 className="text-xl font-bold text-primary ">{selectedMember.name}</h2>
                   <h3 className="mb-2  text-nowrap">{selectedMember.code}</h3>
                   <div className="w-full h-[2px] bg-tertiary"></div>
                 </div>

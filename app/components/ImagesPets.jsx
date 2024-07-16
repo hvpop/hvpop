@@ -50,7 +50,7 @@ const ImagesPets = ({ content }) => {
           </div>
         ))}
       </div>
-      <div className="md:hidden grid grid-cols-3 grid-rows-4 gap-[3px] h-[350px]">
+      <div className="md:hidden grid grid-cols-3 grid-rows-4 gap-[3px] h-[550px]">
         {content?.imagesPets.map((image, index) => (
           <div
             key={index}

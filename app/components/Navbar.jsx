@@ -110,7 +110,7 @@ const Navbar = ({ content }) => {
               activeSection === link
                 ? "bg-secondary text-white "
                 : "bg-white text-quaternary hover:text-secondary"
-            } w-full p-1 flex items-center justify-center h-10 cursor-pointer rounded-t-lg `}>
+            } w-full p-1 flex items-center justify-center h-10 cursor-pointer rounded-t-2xl `}>
             <p className="transform active:scale-90 transition-transform">{link}</p>
           </li>
         ))}

@@ -73,7 +73,7 @@ const Slider = ({ content }) => {
           color="white"
         />
       </button>
-      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-secondary w-[84%] h-3 rounded-t-lg "></div>
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 bg-secondary w-[84%] h-5 rounded-t-2xl "></div>
     </div>
   )
 }

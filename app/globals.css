@@ -5,19 +5,19 @@
 @layer base {
   @font-face {
     font-family: "lilita-one";
-    src: url(/LilitaOne-Regular.ttf);
+    src: url(/LilitaOne-Regular.ttf) format("truetype");
   }
   @font-face {
     font-family: "worksans-bold";
-    src: url(/WorkSans-Bold.ttf);
+    src: url(/WorkSans-Bold.ttf) format("truetype");
   }
   @font-face {
     font-family: "worksans-regular";
-    src: url(/WorkSans-Regular.ttf);
+    src: url(/WorkSans-Regular.ttf) format("truetype");
   }
   @font-face {
     font-family: "worksans-light";
-    src: url(/WorkSans-Light.ttf);
+    src: url(/WorkSans-Light.ttf) format("truetype");
   }
 }
 

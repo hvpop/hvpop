@@ -76,7 +76,7 @@ const StoryMedia = ({ content }) => {
         ref={carouselRef}
         className={
           isOverflowing
-            ? "flex overflow-x-scroll hide-scroll-bar space-x-3 py-4 px-1 sm:border-x-2 border-tertiary"
+            ? "flex overflow-x-scroll hide-scroll-bar space-x-3 py-4 px-1 "
             : "flex justify-center overflow-x-scroll hide-scroll-bar space-x-3 p-4"
         }
         style={{ scrollBehavior: "smooth" }}>
@@ -84,16 +84,16 @@ const StoryMedia = ({ content }) => {
           <div
             key={index}
             onClick={() => handleImageClick(index)}
-            className="relative flex-shrink-0 md:w-[160px] md:h-[140px] w-[140px] h-[120px] shadow-md rounded-2xl cursor-pointer">
+            className="relative flex-shrink-0 md:w-[160px] md:h-[140px] w-[140px] h-[120px] shadow-md rounded-3xl cursor-pointer">
             <Image
-              className="w-full h-full rounded-2xl object-cover object-center"
+              className="w-full h-full rounded-3xl object-cover object-center"
               src={urlFor(src).url()}
               alt={`Slide ${index}`}
               width={500}
               height={500}
               priority={true}
             />
-            <div className="absolute inset-0 sm:bg-gradient-to-t from-primary to-transparent opacity-0 hover:opacity-75 rounded-md flex items-center justify-center">
+            <div className="absolute inset-0 sm:bg-gradient-to-t from-primary to-transparent opacity-0 hover:opacity-75 rounded-3xl flex items-center justify-center">
               <span className="text-white sm:block hidden">
                 <BiExpandAlt fontSize={40} />
               </span>

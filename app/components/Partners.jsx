@@ -15,8 +15,6 @@ const Partners = ({ content }) => {
     setSelectedPartner(null)
   }
 
-  console.log(content)
-
   return (
     <>
       <div className="flex flex-wrap items-center justify-center gap-[2%] mb-3">
@@ -53,7 +51,7 @@ const Partners = ({ content }) => {
             <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8 text-senary">
               <div className="flex items-center gap-4 flex-shrink-0">
                 <Image
-                  className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full object-cover object-center"
+                  className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] shadow-lg rounded-full object-cover object-center"
                   src={urlFor(selectedPartner.image).url()}
                   alt={selectedPartner.name}
                   width={500}

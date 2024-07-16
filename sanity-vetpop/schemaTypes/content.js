@@ -314,5 +314,12 @@ export default {
       of: [{type: 'block'}],
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: 'sponsors',
+      type: 'array',
+      title: 'Patrocinadores',
+      of: [{type: 'image'}],
+      validation: (Rule) => Rule.required().min(3),
+    },
   ],
 }

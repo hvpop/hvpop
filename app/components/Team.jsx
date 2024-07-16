@@ -54,7 +54,7 @@ const Team = ({ content }) => {
   }
 
   const filteredTeam = content.team.filter((member) => member.unit === selectedUnit)
-  console.log(selectedMember)
+
   return (
     <section
       id={content?.navlinks[2]}
@@ -67,12 +67,12 @@ const Team = ({ content }) => {
       <div className="flex items-center justify-center flex-col">
         <div className="flex gap-3 mb-16">
           <button
-            className={` border-2 border-primary rounded-2xl px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "brotas" ? "bg-primary text-white" : " bg-none text-primary"}`}
+            className={` border-2 border-primary rounded-3xl px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "brotas" ? "bg-primary text-white" : " bg-none text-primary"}`}
             onClick={() => handleUnitClick("brotas")}>
             Brotas
           </button>
           <button
-            className={` border-2 border-primary rounded-2xl px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "rv" ? "bg-primary text-white" : " bg-none text-primary"}`}
+            className={` border-2 border-primary rounded-3xl px-4 py-2 font-lilita-one text md:active:scale-95  ${selectedUnit === "rv" ? "bg-primary text-white" : " bg-none text-primary"}`}
             onClick={() => handleUnitClick("rv")}>
             Rio Vermelho
           </button>
@@ -81,19 +81,19 @@ const Team = ({ content }) => {
           {isOverflowing && (
             <>
               {/* Left Arrow Button */}
-              <div className="absolute top-[120px]  left-[-40px] sm:block hidden">
+              <div className="absolute top-[165px]  left-[-40px] sm:block hidden">
                 <button
                   onClick={handleScrollLeft}
-                  className="bg-primary text-white p-[1px] rounded-2xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
+                  className="bg-primary text-white p-[1px] rounded-3xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
                   <IoMdArrowDropleft fontSize={25} />
                 </button>
               </div>
 
               {/* Right Arrow Button */}
-              <div className="absolute top-[120px] right-[-40px] sm:block hidden">
+              <div className="absolute top-[165px] right-[-40px] sm:block hidden">
                 <button
                   onClick={handleScrollRight}
-                  className="bg-primary text-white p-[1px] rounded-2xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
+                  className="bg-primary text-white p-[1px] rounded-3xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
                   <IoMdArrowDropright fontSize={25} />
                 </button>
               </div>
@@ -103,8 +103,8 @@ const Team = ({ content }) => {
             ref={carouselRef}
             className={
               isOverflowing
-                ? "flex gap-8 overflow-x-scroll hide-scroll-bar pt-2 px-4 pb-10 sm:border-x-2 border-primary "
-                : "flex justify-center overflow-x-scroll hide-scroll-bar space-x-3 p-2 pb-10 sm:border-x-2 border-primary"
+                ? "flex gap-8 overflow-x-scroll hide-scroll-bar pt-2 px-4 pb-12  "
+                : "flex justify-center overflow-x-scroll hide-scroll-bar space-x-3 pt-2 px-4 pb-12 sm:border-x-2 border-primary"
             }
             style={{ scrollBehavior: "smooth" }}>
             {filteredTeam.map((member, index) => (
@@ -114,7 +114,7 @@ const Team = ({ content }) => {
                 onClick={() => handleImageClick(member)}>
                 <div>
                   <Image
-                    className="w-[170px] h-[170px] sm:w-[210px] sm:h-[210px] rounded-lg object-cover object-center shadow-lg"
+                    className="w-[210px] h-[300px] sm:w-[240px] sm:h-[340px] rounded-3xl object-cover object-center shadow-lg"
                     src={urlFor(member.image).url()}
                     alt={`Slide ${index}`}
                     width={500}
@@ -122,8 +122,13 @@ const Team = ({ content }) => {
                     priority={true}
                   />
                 </div>
+                <div className="absolute inset-0 sm:bg-gradient-to-t from-primary opacity-0 hover:opacity-75 transition-opacity duration-300 ease-in-out flex items-center justify-center">
+                  <span className="sm:flex hidden justify-center items-center whitespace-nowrap font-lilita-one text-white text-clamp-text">
+                    Ver mais
+                  </span>
+                </div>
                 <div>
-                  <p className="absolute left-[-10px]  -mt-5 w-[190px] sm:w-[230px] text-center text-nowrap bg-tertiary overflow-hidden px-4 py-2 rounded-2xl shadow-lg text-white">
+                  <p className="absolute left-[-10px] -mt-5 w-[230px] sm:w-[260px] text-center text-nowrap bg-tertiary overflow-hidden px-4 py-3 rounded-3xl shadow-lg text-white">
                     {member.name}
                   </p>
                 </div>
@@ -143,7 +148,7 @@ const Team = ({ content }) => {
             <div className="flex flex-col md:flex-row items-center gap-5 md:gap-8 text-senary">
               <div className="flex items-center gap-4 flex-shrink-0">
                 <Image
-                  className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full object-cover object-center"
+                  className="w-[200px] h-[200px] md:w-[300px] md:h-[300px] rounded-full shadow-lg object-cover object-center"
                   src={urlFor(selectedMember.image).url()}
                   alt={selectedMember.name}
                   width={500}

@@ -28,7 +28,7 @@ const ScrollToTopButton = () => {
   }, [])
 
   return (
-    <div className="w-full max-w-screen-2xl fixed bottom-0 z-50">
+    <div className="fixed bottom-0 z-50">
       {isVisible && (
         <button
           onClick={scrollToTop}

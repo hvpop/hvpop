@@ -71,13 +71,12 @@ const StoryMedia = ({ content }) => {
           </div>
         </>
       )}
-
       {/* Carousel Container */}
       <div
         ref={carouselRef}
         className={
           isOverflowing
-            ? "flex overflow-x-scroll hide-scroll-bar space-x-3 p-4"
+            ? "flex overflow-x-scroll hide-scroll-bar space-x-3 py-4 px-1 sm:border-x-2 border-tertiary"
             : "flex justify-center overflow-x-scroll hide-scroll-bar space-x-3 p-4"
         }
         style={{ scrollBehavior: "smooth" }}>

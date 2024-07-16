@@ -167,7 +167,7 @@ export default {
       type: 'array',
       title: 'Serviços',
       of: [{type: 'string'}],
-      validation: (Rule) => Rule.required().min(1),
+      validation: (Rule) => Rule.required().min(8),
     },
     {
       name: 'servicesBg',

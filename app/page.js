@@ -8,6 +8,8 @@ import Testemonials from "./components/Testemonials"
 import Units from "./components/Units"
 import { client } from "./lib/sanity"
 
+export const revalidate = 0
+
 const fetchData = async () => {
   const query = `*[_type == "content"] {
     contact,
@@ -36,9 +38,11 @@ const fetchData = async () => {
 const Page = async () => {
   const data = await fetchData()
   return (
-    <>
+    <div className="pt-[65px] sm:pt-[110px] relative">
       <ScrollToTopButton />
-      <Navbar content={data} />
+      <div className="absolute top-0">
+        <Navbar content={data} />
+      </div>
       <main>
         <Home content={data} />
         <Services content={data} />
@@ -47,7 +51,7 @@ const Page = async () => {
         <Testemonials content={data} />
       </main>
       <Footer content={data} />
-    </>
+    </div>
   )
 }
 

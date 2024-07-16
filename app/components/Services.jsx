@@ -36,14 +36,14 @@ const Services = ({ content }) => {
   return (
     <section
       id={content.navlinks[1]}
-      className="relative pt-24">
+      className="relative">
       <Principles content={content} />
       <div className="grid md:grid-cols-2 py-10 relative">
         {/* mobile */}
         <div className="md:hidden block absolute top-[-19%] right-0 transform ">
           <ChipCanvas scale={0.4} />
         </div>
-        <div className="md:hidden block absolute bottom-[-16%] left-[-5%] transform -scale-x-100 z-10 ">
+        <div className="md:hidden w-20 h-20 block absolute bottom-[10%] left-[18%] transform -scale-x-100 z-10 ">
           <ChipCanvas scale={0.2} />
         </div>
         <div className="md:hidden block absolute bottom-[30%] right-0  ">
@@ -90,7 +90,7 @@ const Services = ({ content }) => {
         <div className="hidden md:block absolute top-[-10%] left-0 z-30">
           <ChipCanvas scale={0.4} />
         </div>
-        <div className="hidden md:block absolute bottom-[-10%] right-[5%] z-30">
+        <div className="hidden md:block absolute bottom-[-15%] right-[5%] z-30">
           <ChipCanvas scale={0.35} />
         </div>
         <div className="hidden md:block absolute top-[15%] right-0 transform -scale-x-100 ">
@@ -186,7 +186,7 @@ const Services = ({ content }) => {
           ))}
         </div>
       )}
-      <div className="absolute w-full z-20">
+      <div className="w-full py-16 md:py-28">
         <ImagesPets content={content} />
       </div>
     </section>

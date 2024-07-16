@@ -14,7 +14,7 @@ const Navbar = ({ content }) => {
   const scrollToSection = (sectionId) => {
     const element = document.querySelector(`#${sectionId}`)
     if (element) {
-      const marginTop = 0
+      const marginTop = window.innerWidth >= 640 ? 110 : 65
       const scrollToY = element.getBoundingClientRect().top + window.scrollY - marginTop
       window.scrollTo({ top: scrollToY, behavior: "smooth" })
     }

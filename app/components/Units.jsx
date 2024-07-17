@@ -82,7 +82,8 @@ const Units = ({ content }) => {
                       {unit.images.map((image, index) => (
                         <div
                           className="relative"
-                          onClick={() => handleImageClick(index)}>
+                          onClick={() => handleImageClick(index)}
+                          key={index}>
                           <Image
                             key={index}
                             className="w-[100px] h-[100px] object-cover object-center shadow-lg"
@@ -141,7 +142,8 @@ const Units = ({ content }) => {
                       {unit.images.map((image, index) => (
                         <div
                           className="relative"
-                          onClick={() => handleImageClick(index)}>
+                          onClick={() => handleImageClick(index)}
+                          key={index}>
                           <Image
                             key={index}
                             className="w-[100px] h-[100px] object-cover object-center shadow-lg"
@@ -191,10 +193,13 @@ const Units = ({ content }) => {
           className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-40"
           onClick={handleCloseImage}>
           <div className="relative mx-[5%]">
-            <img
-              src={selectedImage}
-              alt="Enlarged"
+            <Image
               className="max-h-full max-w-full mx-auto rounded-lg"
+              src={urlFor(selectedImage).url()}
+              alt="Enlarged"
+              width={600}
+              height={600}
+              priority={true}
             />
             <button
               className="absolute flex items-center justify-center top-3 right-3 font-lilita-one bg-tertiary text-white w-6 h-6 text-sm md:w-8 md:h-8 md:text-xl rounded-lg transform active:scale-75 transition-transform"

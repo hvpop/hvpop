@@ -61,7 +61,7 @@ const Navbar = ({ content }) => {
     }
   }, [])
   return (
-    <nav className="bg-primary max-w-screen-2xl pt-3 w-full px-[8%] z-50 fixed border-b-4 h-[65px] sm:h-[110px] flex flex-col justify-between border-tertiary shadow-lg">
+    <nav className="bg-primary max-w-screen-2xl pt-3 w-full px-[8%] z-40 fixed border-b-4 h-[65px] sm:h-[110px] flex flex-col justify-between border-tertiary shadow-lg">
       <div className="mb-4 flex items-center justify-between">
         <Image
           className="rounded w-[120px] object-cover object-center"
@@ -109,7 +109,7 @@ const Navbar = ({ content }) => {
               activeSection === link
                 ? "bg-secondary text-white "
                 : "bg-white text-quaternary hover:text-secondary"
-            } w-full p-1 flex items-center justify-center h-10 cursor-pointer rounded-t-3xl `}>
+            } w-full p-1 flex items-center justify-center h-10 cursor-pointer rounded-t-2xl `}>
             <p className="transform active:scale-90 transition-transform">{link}</p>
           </li>
         ))}

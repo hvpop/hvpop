@@ -89,8 +89,8 @@ const ImagesPets = ({ content }) => {
               className="max-h-full max-w-full mx-auto rounded-lg"
               src={urlFor(selectedImage).url()}
               alt="Enlarged"
-              width={500}
-              height={500}
+              width={700}
+              height={700}
               priority={true}
             />
             <button

@@ -29,21 +29,19 @@ const Units = ({ content }) => {
     )
   }
 
-  console.log(selectedImage)
-
   const filteredUnit = content.units.filter((unit) => unit.unit === selectedUnit)
 
   return (
     <section
       id={content?.navlinks[3]}
-      className="mx-[8%] py-7">
+      className="mx-[8%] pt-7 pb-12">
       <div className="flex items-center sm:justify-between justify-center gap-3 mb-7">
         <p className=" font-lilita-one text-primary text-clamp-title text-nowrap">Unidades</p>
         <div className=" h-1 w-full flex bg-tertiary"></div>
       </div>
       <div className="lg:flex w-full block flex-col lg:items-start items-center lg:flex-row gap-10 ">
         <div className="basis-1/2">
-          <div className="flex flex-col gap-3 w-[80%] mx-auto  ">
+          <div className="flex flex-col gap-3 w-[100%] mx-auto  ">
             <div className="flex items-center gap-2">
               <div
                 className={`border-2 border-primary flex-shrink-0 rounded-full flex items-center justify-center w-10 h-10 ${selectedUnit === "brotas" ? "bg-primary text-white" : "bg-white text-primary"}`}>
@@ -78,7 +76,7 @@ const Units = ({ content }) => {
                     className=" mx-auto text-justify text-senary">
                     <p className=" font-bold">{unit.adress}</p>
                     <p>{unit.reference}</p>
-                    <div className="w-[350px] mx-auto grid grid-cols-3 gap-2 overflow-y-scroll hide-scroll-bar p-5">
+                    <div className="w-full max-h-[300px] mx-auto flex flex-wrap items-center justify-center gap-2 overflow-y-scroll hide-scroll-bar p-2">
                       {unit.images.map((image, index) => (
                         <div
                           className="relative"
@@ -86,7 +84,7 @@ const Units = ({ content }) => {
                           key={index}>
                           <Image
                             key={index}
-                            className="w-[100px] h-[100px] object-cover object-center shadow-lg"
+                            className="md:w-[100px] md:h-[100px] w-[70px] h-[70px] object-cover object-center shadow-md"
                             src={urlFor(image).url()}
                             alt={`Image ${index}`}
                             width={500}
@@ -138,7 +136,7 @@ const Units = ({ content }) => {
                     className=" mx-auto text-justify text-senary">
                     <p className=" font-bold">{unit.adress}</p>
                     <p>{unit.reference}</p>
-                    <div className="w-[350px] mx-auto grid grid-cols-3 gap-2 overflow-y-scroll hide-scroll-bar p-5">
+                    <div className="w-full mx-auto flex flex-wrap items-center justify-center gap-2 overflow-y-scroll hide-scroll-bar p-2">
                       {unit.images.map((image, index) => (
                         <div
                           className="relative"
@@ -146,7 +144,7 @@ const Units = ({ content }) => {
                           key={index}>
                           <Image
                             key={index}
-                            className="w-[100px] h-[100px] object-cover object-center shadow-lg"
+                            className="md:w-[100px] md:h-[100px] w-[70px] h-[70px] object-cover object-center shadow-md"
                             src={urlFor(image).url()}
                             alt={`Image ${index}`}
                             width={500}
@@ -190,7 +188,7 @@ const Units = ({ content }) => {
       </div>
       {selectedImage && (
         <div
-          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-40"
+          className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50"
           onClick={handleCloseImage}>
           <div className="relative mx-[5%]">
             <Image

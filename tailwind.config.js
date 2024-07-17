@@ -26,7 +26,7 @@ module.exports = {
         tertiary: "#D12121",
         quaternary: "#707070",
         quinary: "#E6E6E6",
-        senary: "#929292",
+        senary: "#8D8D8D",
       },
       backgroundImage: { "principles-pattern": "url('/principlesBg.png)" },
       scale: {

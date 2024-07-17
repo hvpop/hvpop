@@ -47,6 +47,18 @@ export default {
           validation: (Rule) => Rule.required(),
         },
         {name: 'email', type: 'string', title: 'Email', validation: (Rule) => Rule.required()},
+        {
+          name: 'linkWhatsapp',
+          type: 'string',
+          title: 'WhatsApp Link',
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'linkInstagram',
+          type: 'string',
+          title: 'Instagram Link',
+          validation: (Rule) => Rule.required(),
+        },
       ],
     },
     {
@@ -320,6 +332,13 @@ export default {
       title: 'Patrocinadores',
       of: [{type: 'image'}],
       validation: (Rule) => Rule.required().min(3),
+    },
+    {
+      name: 'privacy',
+      type: 'array',
+      title: 'Política de privacidade',
+      of: [{type: 'block'}],
+      validation: (Rule) => Rule.required(),
     },
   ],
 }

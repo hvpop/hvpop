@@ -1,3 +1,4 @@
+import CookieBanner from "./components/CookieBanner"
 import Footer from "./components/Footer"
 import Home from "./components/Home"
 import Navbar from "./components/Navbar"
@@ -29,6 +30,8 @@ const fetchData = async () => {
     testemonials,
     testemonialsBg,
     footerText,
+    privacy,
+    sponsors
   }`
 
   const data = await client.fetch(query)
@@ -37,10 +40,12 @@ const fetchData = async () => {
 
 const Page = async () => {
   const data = await fetchData()
+
   return (
     <div className="pt-[65px] sm:pt-[110px] relative">
       <ScrollToTopButton />
       <div className="absolute top-0">
+        <CookieBanner content={data} />
         <Navbar content={data} />
       </div>
       <main>

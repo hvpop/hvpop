@@ -104,7 +104,7 @@ const Team = ({ content }) => {
             className={
               isOverflowing
                 ? "flex gap-8 overflow-x-scroll hide-scroll-bar pt-2 px-4 pb-12  "
-                : "flex justify-center overflow-x-scroll hide-scroll-bar space-x-3 pt-2 px-4 pb-12 sm:border-x-2 border-primary"
+                : "flex justify-center overflow-x-scroll hide-scroll-bar gap-8 pt-2 px-4 pb-12 "
             }
             style={{ scrollBehavior: "smooth" }}>
             {filteredTeam.map((member, index) => (

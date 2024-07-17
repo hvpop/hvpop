@@ -12,8 +12,23 @@ import Image from "next/image"
 const Footer = ({ content }) => {
   const [showModal, setShowModal] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isSliding, setIsSliding] = useState(true) // Start sliding by default
-  const itemsPerPage = 4
+  const [itemsPerPage, setItemsPerPage] = useState(5)
+  const [isSliding, setIsSliding] = useState(true)
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1024) {
+        setItemsPerPage(2)
+      } else {
+        setItemsPerPage(5)
+      }
+    }
+
+    handleResize()
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+  }, [])
 
   useEffect(() => {
     emailjs.init(process.env.NEXT_PUBLIC_PUBLIC_KEY)

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 import emailjs from "@emailjs/browser"
 import { urlFor } from "../lib/sanity"
 import Image from "next/image"
+import Link from "next/link"
 
 const Footer = ({ content }) => {
   const [showModal, setShowModal] = useState(false)
@@ -78,12 +79,15 @@ const Footer = ({ content }) => {
       <div className="flex flex-col md:flex-row justify-between pb-5">
         <div className="p-4 flex flex-col gap-3">
           <h2 className="text-primary font-lilita-one text-clamp-title">Contatos</h2>
-          <p className="flex gap-2 items-center text-senary">
+          <Link
+            href={content.contact.linkWhatsapp}
+            target="_blank"
+            className="flex gap-2 items-center text-senary">
             <span className="text-tertiary">
               <RiWhatsappFill fontSize={20} />
             </span>
             {content.contact.whatsapp}
-          </p>
+          </Link>
           <p className="flex gap-2 items-center text-senary">
             <span className="text-tertiary">
               <IoCall fontSize={20} />
@@ -96,12 +100,15 @@ const Footer = ({ content }) => {
             </span>
             {content.contact.telRV}
           </p>
-          <p className="flex gap-2 items-center text-senary">
+          <Link
+            className="flex gap-2 items-center text-senary"
+            href={content.contact.linkInstagram}
+            target="_blank">
             <span className="text-tertiary">
               <RiInstagramFill fontSize={20} />
             </span>
             {content.contact.instagram}
-          </p>
+          </Link>
           <p className="flex gap-2 items-center text-senary">
             <span className="text-tertiary">
               <MdEmail fontSize={20} />

@@ -5,6 +5,7 @@ import { urlFor } from "../lib/sanity"
 import { RiInstagramFill } from "react-icons/ri"
 import { RiWhatsappFill } from "react-icons/ri"
 import { FaArrowAltCircleUp } from "react-icons/fa"
+import Link from "next/link"
 
 const Navbar = ({ content }) => {
   const [activeSection, setActiveSection] = useState("Home")
@@ -72,14 +73,20 @@ const Navbar = ({ content }) => {
           priority={true}
         />
         <div className="gap-2 text-xs text-white hidden sm:flex">
-          <div className="flex items-center justify-center gap-1">
+          <Link
+            className="flex items-center justify-center gap-1"
+            href={content.contact.linkWhatsapp}
+            target="_blank">
             <RiWhatsappFill fontSize={20} />
             <p className="text-[0.8rem]">{content.contact.whatsapp}</p>
-          </div>
-          <div className="flex items-center justify-center gap-1">
+          </Link>
+          <Link
+            className="flex items-center justify-center gap-1"
+            href={content.contact.linkInstagram}
+            target="_blank">
             <RiInstagramFill fontSize={20} />
             <p className="text-[0.8rem]">{content.contact.instagram}</p>
-          </div>
+          </Link>
         </div>
         <div
           className="sm:hidden flex flex-col gap-[0.3rem] cursor-pointer transform transition-transform"

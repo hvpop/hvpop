@@ -22,14 +22,14 @@ const Services = ({ content }) => {
     setCurrentIndex(index * groupSize)
   }
 
-  useEffect(() => {
-    if (totalSlides > 1) {
-      const interval = setInterval(() => {
-        handleNext()
-      }, 5000)
-      return () => clearInterval(interval)
-    }
-  }, [content.services.length, totalSlides])
+  // useEffect(() => {
+  //   if (totalSlides > 1) {
+  //     const interval = setInterval(() => {
+  //       handleNext()
+  //     }, 5000)
+  //     return () => clearInterval(interval)
+  //   }
+  // }, [content.services.length, totalSlides])
 
   const servicesToDisplay = content.services.slice(currentIndex, currentIndex + groupSize)
 

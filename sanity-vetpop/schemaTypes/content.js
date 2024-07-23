@@ -326,11 +326,31 @@ export default {
       of: [{type: 'block'}],
       validation: (Rule) => Rule.required(),
     },
+
     {
       name: 'sponsors',
       type: 'array',
       title: 'Patrocinadores',
-      of: [{type: 'image'}],
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {name: 'name', type: 'string', title: 'Nome', validation: (Rule) => Rule.required()},
+            {
+              name: 'link',
+              type: 'string',
+              title: 'Link',
+              validation: (Rule) => Rule.required(),
+            },
+            {
+              name: 'image',
+              type: 'image',
+              title: 'Foto',
+              validation: (Rule) => Rule.required(),
+            },
+          ],
+        },
+      ],
       validation: (Rule) => Rule.required().min(3),
     },
     {

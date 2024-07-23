@@ -55,7 +55,11 @@ const ChipCanvas = ({ scale }) => {
         <Suspense fallback={null}>
           <Chip scale={scale} />
         </Suspense>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls
+          enableZoom={false}
+          enableDamping={false}
+          enablePan={false}
+        />
       </Canvas>
     </div>
   )

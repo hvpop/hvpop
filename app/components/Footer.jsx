@@ -15,6 +15,13 @@ const Footer = ({ content }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [itemsPerPage, setItemsPerPage] = useState(5)
   const [isSliding, setIsSliding] = useState(true)
+  const [send, setSend] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setSend(false)
+    }, 2000)
+  }, [send])
 
   useEffect(() => {
     const handleResize = () => {
@@ -43,6 +50,7 @@ const Footer = ({ content }) => {
       .then(
         () => {
           console.log("SUCCESS!")
+          setSend(true)
         },
         (error) => {
           console.log("FAILED...", error)
@@ -149,6 +157,9 @@ const Footer = ({ content }) => {
                 className="py-2 px-4 self-center md:self-start bg-primary text-white rounded-2xl font-lilita-one"
               />
             </form>
+            <div className="w-full h-5">
+              {send && <p className="text-sm text-green-500">Mensagem enviada!</p>}
+            </div>
           </div>
         </div>
       </div>
@@ -156,14 +167,18 @@ const Footer = ({ content }) => {
         <div className="flex items-center justify-center">
           {visiblesponsors.map((sponsor, index) => (
             <div key={index}>
-              <Image
-                className="w-[200px] p-5 object-cover object-center"
-                src={urlFor(sponsor).url()}
-                alt={`Sponsor ${index}`}
-                width={500}
-                height={500}
-                priority={true}
-              />
+              <Link
+                href={sponsor.link}
+                target="_blank">
+                <Image
+                  className="w-[200px] p-5 object-cover object-center"
+                  src={urlFor(sponsor.image).url()}
+                  alt={`Sponsor ${index}`}
+                  width={500}
+                  height={500}
+                  priority={true}
+                />
+              </Link>
             </div>
           ))}
         </div>

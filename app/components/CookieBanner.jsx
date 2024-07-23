@@ -23,7 +23,7 @@ const CookieBanner = ({ content }) => {
   return (
     <article className="fixed max-w-screen-2xl z-50 top-0">
       {!cookies.cookieConsent && (
-        <div className="bg-white flex p-10">
+        <div className="bg-white flex items-center p-10">
           <p>
             Nosso site utiliza cookies para personalizar conteúdo e anúncios, fornecer recursos de
             mídia social e analisar nosso tráfego. Ao continuar navegando, você concorda com nossa{" "}

@@ -78,27 +78,24 @@ const Team = ({ content }) => {
           </button>
         </div>
         <div className="relative w-[95%] mx-auto">
-          {isOverflowing && (
-            <>
-              {/* Left Arrow Button */}
-              <div className="absolute top-[165px]  left-[-40px] sm:block hidden">
-                <button
-                  onClick={handleScrollLeft}
-                  className="bg-primary text-white p-[1px] rounded-3xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
-                  <IoMdArrowDropleft fontSize={25} />
-                </button>
-              </div>
+          {/* Left Arrow Button */}
+          <div className="absolute top-[165px]  left-[-40px] sm:block hidden">
+            <button
+              onClick={handleScrollLeft}
+              className="bg-primary text-white p-[1px] rounded-3xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
+              <IoMdArrowDropleft fontSize={25} />
+            </button>
+          </div>
 
-              {/* Right Arrow Button */}
-              <div className="absolute top-[165px] right-[-40px] sm:block hidden">
-                <button
-                  onClick={handleScrollRight}
-                  className="bg-primary text-white p-[1px] rounded-3xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
-                  <IoMdArrowDropright fontSize={25} />
-                </button>
-              </div>
-            </>
-          )}
+          {/* Right Arrow Button */}
+          <div className="absolute top-[165px] right-[-40px] sm:block hidden">
+            <button
+              onClick={handleScrollRight}
+              className="bg-primary text-white p-[1px] rounded-3xl shadow-md transform active:scale-75 transition-transform flex items-center justify-center">
+              <IoMdArrowDropright fontSize={25} />
+            </button>
+          </div>
+
           <div
             ref={carouselRef}
             className={

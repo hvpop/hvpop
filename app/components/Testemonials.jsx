@@ -106,6 +106,7 @@ const Testimonials = ({ content }) => {
               </div>
               <div className="flex items-end justify-between">
                 <div className="text-primary overflow-hidden">
+                  <p className="text-sm">{test.date}</p>
                   <p className="font-bold text-nowrap">{test.name}</p>
                   <p>{test.petText}</p>
                 </div>

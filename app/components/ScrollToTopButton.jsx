@@ -28,16 +28,17 @@ const ScrollToTopButton = () => {
   }, [])
 
   return (
-    <div className="fixed bottom-0 z-50">
-      {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="text-tertiary z-50 opacity-60 m-10">
-          <FaArrowAltCircleUp fontSize={50} />
-        </button>
-      )}
+    <div className=" fixed w-full max-w-screen-2xl bottom-0 z-10">
+      <div className="flex items-end justify-end">
+        {isVisible && (
+          <button
+            onClick={scrollToTop}
+            className="text-tertiary opacity-60 m-10">
+            <FaArrowAltCircleUp fontSize={50} />
+          </button>
+        )}
+      </div>
     </div>
   )
 }
-
 export default ScrollToTopButton

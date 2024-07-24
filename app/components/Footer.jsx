@@ -184,7 +184,7 @@ const Footer = ({ content }) => {
         </div>
       </div>
       <div className="w-full h-36 bg-primary flex items-end">
-        <p className="text-white p-2">
+        <p className="text-white p-2 z-20">
           HVPOP | Hospital Veterinário Popular.{" "}
           <span
             className="underline underline-offset-4 text-tertiary cursor-pointer"

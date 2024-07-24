@@ -59,7 +59,7 @@ const Team = ({ content }) => {
     <section
       id={content?.navlinks[2]}
       className="relative px-[8%] pb-[100px] pt-7">
-      <div className="absolute inset-0 bg-[url('/teamBg.png')] bg-cover -z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-neutral-300 bg-cover -z-10"></div>
       <div className="flex items-center sm:justify-between justify-center gap-3 mb-7">
         <p className=" font-lilita-one text-primary text-clamp-title text-nowrap">Nosso Time</p>
         <div className=" h-1 w-full flex bg-tertiary"></div>

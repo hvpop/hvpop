@@ -45,7 +45,7 @@ const Page = async () => {
     <div className="pt-[65px] sm:pt-[110px] relative">
       <ScrollToTopButton />
       <div className="absolute top-0">
-        <CookieBanner content={data} />
+        {/* <CookieBanner content={data} /> */}
         <Navbar content={data} />
       </div>
       <main>

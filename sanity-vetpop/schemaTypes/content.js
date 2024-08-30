@@ -159,16 +159,16 @@ export default {
       title: 'Princípios',
       fields: [
         {
-          name: 'compromisso',
+          name: 'missao',
           type: 'string',
-          title: 'Compromisso',
+          title: 'Missão',
           validation: (Rule) => Rule.required(),
         },
-        {name: 'etica', type: 'string', title: 'Ética', validation: (Rule) => Rule.required()},
+        {name: 'visao', type: 'string', title: 'Visão', validation: (Rule) => Rule.required()},
         {
-          name: 'transparencia',
+          name: 'valores',
           type: 'string',
-          title: 'Transparência',
+          title: 'Valores',
           validation: (Rule) => Rule.required(),
         },
       ],

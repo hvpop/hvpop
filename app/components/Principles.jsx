@@ -17,8 +17,8 @@ const Principles = ({ content }) => {
               <FaHandshakeSimple fontSize={50} />
             </div>
             <div>
-              <h3 className=" font-bold ">Compromisso</h3>
-              <p>{content.principles.compromisso}</p>
+              <h3 className=" font-bold "> Missão</h3>
+              <p>{content.principles.missao}</p>
             </div>
           </div>
           <div className="flex max-w-[450px] p-4 items-center justify-center gap-5 md:border-r-[2px] ">
@@ -26,8 +26,8 @@ const Principles = ({ content }) => {
               <FaScaleBalanced fontSize={50} />
             </div>
             <div>
-              <h3 className=" font-bold ">Ética</h3>
-              <p>{content.principles.etica}</p>
+              <h3 className=" font-bold ">Visão</h3>
+              <p>{content.principles.visao}</p>
             </div>
           </div>
           <div className="flex max-w-[450px] p-4 items-center justify-center gap-5">
@@ -35,8 +35,8 @@ const Principles = ({ content }) => {
               <FaFileCircleCheck fontSize={50} />
             </div>
             <div>
-              <h3 className=" font-bold ">Transparência</h3>
-              <p>{content.principles.transparencia}</p>
+              <h3 className=" font-bold ">Valores</h3>
+              <p>{content.principles.valores}</p>
             </div>
           </div>
         </div>

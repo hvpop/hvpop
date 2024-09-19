@@ -275,6 +275,27 @@ export default {
       validation: (Rule) => Rule.required().length(2),
     },
     {
+      name: 'rules',
+      type: 'object',
+      title: 'Regras',
+      fields: [
+        {
+          name: 'title',
+          type: 'string',
+          title: 'Título',
+          validation: (Rule) => Rule.required(),
+        },
+        {
+          name: 'text',
+          type: 'array',
+          title: 'Texto',
+          of: [{type: 'block'}],
+          validation: (Rule) => Rule.required(),
+        },
+      ],
+      validation: (Rule) => Rule.required(),
+    },
+    {
       name: 'testemonialsBg',
       type: 'image',
       title: 'Depoimentos Background',

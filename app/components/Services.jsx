@@ -88,7 +88,7 @@ const Services = ({ content }) => {
         </div>
         {/* desktop */}
         <div className="hidden md:block absolute top-[-10%] left-0 z-30">
-          <ChipCanvas scale={0.4} />
+          <ChipCanvas scale={0.4}  />
         </div>
         <div className="hidden md:block absolute bottom-[-15%] right-[5%] z-30">
           <ChipCanvas scale={0.35} />

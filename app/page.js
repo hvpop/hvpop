@@ -1,15 +1,16 @@
-import CookieBanner from "./components/CookieBanner"
-import Footer from "./components/Footer"
-import Home from "./components/Home"
-import Navbar from "./components/Navbar"
-import ScrollToTopButton from "./components/ScrollToTopButton"
-import Services from "./components/Services"
-import Team from "./components/Team"
-import Testemonials from "./components/Testemonials"
-import Units from "./components/Units"
-import { client } from "./lib/sanity"
+import CookieBanner from "./components/CookieBanner";
+import Footer from "./components/Footer";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import ScrollToTopButton from "./components/ScrollToTopButton";
+import Services from "./components/Services";
+import Team from "./components/Team";
+import Testemonials from "./components/Testemonials";
+import Units from "./components/Units";
+import { client } from "./lib/sanity";
+import Info from "@/app/components/Info";
 
-export const revalidate = 0
+export const revalidate = 0;
 
 const fetchData = async () => {
   const query = `*[_type == "content"] {
@@ -27,19 +28,20 @@ const fetchData = async () => {
     imagesPets,
     team,
     units,
+    rules,
     testemonials,
     testemonialsBg,
     footerText,
     privacy,
     sponsors
-  }`
+  }`;
 
-  const data = await client.fetch(query)
-  return data[0]
-}
+  const data = await client.fetch(query);
+  return data[0];
+};
 
 const Page = async () => {
-  const data = await fetchData()
+  const data = await fetchData();
 
   return (
     <div className="pt-[65px] sm:pt-[110px] relative">
@@ -53,11 +55,12 @@ const Page = async () => {
         <Services content={data} />
         <Team content={data} />
         <Units content={data} />
+        <Info content={data} />
         <Testemonials content={data} />
       </main>
       <Footer content={data} />
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;
